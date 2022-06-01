@@ -1,0 +1,30 @@
+:root {
+  --white: #fff;
+  --grey: #dbdee1;
+  --black: #1d1d1f;
+  --pink: #fe3f5a;
+  --orange: #fe8356;
+  --background: #fea956;
+  --gardient: linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+}
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background: #f9f9fa;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
