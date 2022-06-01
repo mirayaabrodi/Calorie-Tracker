@@ -35,6 +35,7 @@ ul {
   width: 100%;
   margin: auto;
   display: flex;
+  padding: 30px;
   max-width: 600px;
   border-radius: 10px;
   align-items: center;
