@@ -43,4 +43,5 @@ ul {
   justify-content: center;
   background: var(--white);
   transform: translateY(50%);
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
 }
