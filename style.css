@@ -42,8 +42,8 @@ ul {
   width: 100%;
   margin: auto;
   display: flex;
-  padding: 30px 10px;
   max-width: 600px;
+  padding: 30px 10px;
   border-radius: 10px;
   align-items: center;
   flex-direction: column;
@@ -57,13 +57,14 @@ ul {
 
 .logo {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   text-align: center;
 }
 
 .logo h1 {
+  padding-bottom: 30px;
   font-size: calc(35 / 16 * 1rem);
-  padding-bottom: 15px;
+
   background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,10 +74,29 @@ ul {
 
 .calories {
   width: 100%;
-  padding: 15px 0;
-  max-width: 400px;
+  padding: 30px 0;
+  max-width: 500px;
   text-align: center;
 }
 .calories h2 {
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+}
+/* Card Input */
+
+.card-input {
+  width: 100%;
+  display: flex;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.card-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  max-width: 75%;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-bottom: 1px solid;
+  color: var(--medium-grey);
 }
