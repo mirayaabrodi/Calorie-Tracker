@@ -149,3 +149,41 @@ ul {
 .card-button button i {
   color: var(--white);
 }
+
+/* Setting Buttons */
+.setting-button {
+  display: flex;
+  justify-content: center;
+}
+
+.setting-button button {
+  border: none;
+  width: 100px;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin: 20px 20px 30px 20px;
+}
+
+.setting-button .edit-btn,
+.setting-button .back-btn {
+  background: var(--pink);
+}
+
+.setting-button .delete-btn {
+  background: var(--gardient);
+}
+
+.setting-button .back-btn {
+  background: var(--pink);
+}
+
+.setting-button .edit-btn:hover,
+.setting-button .delete-btn:hover,
+.setting-button .back-btn:hover {
+  transform: scale(0.98);
+}
