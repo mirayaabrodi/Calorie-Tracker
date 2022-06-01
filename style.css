@@ -35,7 +35,7 @@ ul {
   width: 100%;
   margin: auto;
   display: flex;
-  padding: 30px;
+  padding: 30px 10px;
   max-width: 600px;
   border-radius: 10px;
   align-items: center;
@@ -44,4 +44,25 @@ ul {
   background: var(--white);
   transform: translateY(50%);
   box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
+}
+
+/* Logo */
+
+.logo {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo h1 {
+  font-size: calc(35 / 16 * 1rem);
+  padding-bottom: 15px;
+  background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.line {
+  background: var(--grey);
+  width: 100%;
+  height: 1px;
 }
