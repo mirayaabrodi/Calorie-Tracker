@@ -1,49 +1,33 @@
 // Storage Controller
 
-// --------------------------------------------------------------------------------------------------
-
 // Item Controller
 const ItemCtrl = (function () {
   // Item Constructor
-  const Item = function (id, name, caloies) {
+  const Item = function (id, name, calories) {
     this.id = id;
     this.name = name;
-    this, (caloies = caloies);
+    this.calories = calories;
   };
 
-  // --------------------------------------------------------------------------------------------------
-
-  // Data structor
+  // Data Structure / State
   const data = {
     items: [
-      {
-        id: 0,
-        name: "Steak Dinner",
-        calories: 1200,
-      },
-      {
-        id: 1,
-        name: "Cookie",
-        calories: 400,
-      },
-      {
-        id: 2,
-        name: "Eggs",
-        calories: 200,
-      },
+      // {id: 0, name: 'Steak Dinner', calories: 1200},
+      // {id: 1, name: 'Cookie', calories: 400},
+      // {id: 2, name: 'Eggs', calories: 300}
     ],
-    currentItem: null, // if we click on settings (on a item), we want that paticular item to be the current item
+    currentItem: null,
     totalCalories: 0,
   };
 
-  // Access data in console
+  // Public methods
   return {
     getItems: function () {
       return data.items;
     },
     addItem: function (name, calories) {
       let ID;
-      // Ireate ID
+      // Create ID
       if (data.items.length > 0) {
         ID = data.items[data.items.length - 1].id + 1;
       } else {
@@ -67,40 +51,67 @@ const ItemCtrl = (function () {
   };
 })();
 
-// --------------------------------------------------------------------------------------------------
-
 // UI Controller
 const UICtrl = (function () {
   const UISelectors = {
-    itemList: "#item-list",
-    addBtn: ".add-btn",
+    itemList: ".item-list",
+    addBtn: ".add-meal-btn",
     itemNameInput: "#meal-input",
     itemCaloriesInput: "#calorie-input",
   };
 
-  // Public Mehods
+  // Public methods
   return {
     populateItemList: function (items) {
-      // loop thru items, make each one to a list item, then insert it to ul (item-list)
       let html = "";
+
       items.forEach(function (item) {
-        html += `<li class="collection-item" id="${item.id}">
-        <strong>${item.name}</strong> <em>${item.calories}</em>
-        <a href="#" class="setting">
-            <i class="edit-item fa-solid fa-gear"></i>
-        </a>
-    </li>`;
+        html += `
+        <li class="collection-item" id="${item.id}">
+                    <strong>${item.name}:</strong> <em>${item.calories} Calories</em>
+                    <a href="#" class="setting">
+                        <i class="edit-item fa-solid fa-gear"></i>
+                    </a>
+                </li>`;
       });
 
       // Insert list items
-      document.querySelector(".item-list").innerHTML = html;
+      document.querySelector(UISelectors.itemList).innerHTML = html;
     },
-
     getItemInput: function () {
       return {
         name: document.querySelector(UISelectors.itemNameInput).value,
         calories: document.querySelector(UISelectors.itemCaloriesInput).value,
       };
+    },
+    addListItem: function (item) {
+      // Show the list
+      document.querySelector(UISelectors.itemList).style.display = "block";
+      // Create li element
+      const li = document.createElement("li");
+      // Add class
+      li.className = "collection-item";
+      // Add ID
+      li.id = `item-${item.id}`;
+      // Add HTML
+      li.innerHTML = ` <strong>${item.name}:</strong> <em>${item.calories} Calories</em>
+                    <a href="#" class="setting">
+                        
+                    
+                    
+                    <i class="edit-item fa-solid fa-gear"></i>
+                    </a>`;
+      // Insert item
+      document
+        .querySelector(UISelectors.itemList)
+        .insertAdjacentElement("beforeend", li);
+    },
+    clearInput: function () {
+      document.querySelector(UISelectors.itemNameInput).value = "";
+      document.querySelector(UISelectors.itemCaloriesInput).value = "";
+    },
+    hideList: function () {
+      document.querySelector(UISelectors.itemList).style.display = "none";
     },
     getSelectors: function () {
       return UISelectors;
@@ -108,45 +119,58 @@ const UICtrl = (function () {
   };
 })();
 
-// --------------------------------------------------------------------------------------------------
-
 // App Controller
-const App = (function (itemCtrl, UICtrl) {
-  // Load Event Listeners
+const App = (function (ItemCtrl, UICtrl) {
+  // Load event listeners
   const loadEventListeners = function () {
-    // Get Ui selectors
+    // Get UI selectors
     const UISelectors = UICtrl.getSelectors();
 
     // Add item event
-    document.querySelector(UISelectors.addBtn);
-    addEventListener("click", itemAddAubmit);
+    document
+      .querySelector(UISelectors.addBtn)
+      .addEventListener("click", itemAddSubmit);
   };
 
   // Add item submit
-  const itemAddAubmit = function (e) {
-    //  Get form input from UI Controller
+  const itemAddSubmit = function (e) {
+    // Get form input from UI Controller
     const input = UICtrl.getItemInput();
 
-    if (InputDeviceInfo.name !== "" && InputDeviceInfo.calories !== "") {
-      // Add Item
+    // Check for name and calorie input
+    if (input.name !== "" && input.calories !== "") {
+      // Add item
       const newItem = ItemCtrl.addItem(input.name, input.calories);
+
+      // Add item to UI list
+      UICtrl.addListItem(newItem);
+
+      // Clear fields
+      UICtrl.clearInput();
     }
 
     e.preventDefault();
   };
 
-  // Public Mehtods
+  // Public methods
   return {
     init: function () {
-      // Fetch item from data structure:
-      // getting item from the item controller, and putting in them in a variable
-      const item = itemCtrl.getItems();
+      // Fetch items from data structure
+      const items = ItemCtrl.getItems();
 
-      // Populate list with items (pasisng the item in)
-      UICtrl.populateItemList(item);
+      // Check if any items
+      if (items.length === 0) {
+        UICtrl.hideList();
+      } else {
+        // Populate list with items
+        UICtrl.populateItemList(items);
+      }
+
+      // Load event listeners
       loadEventListeners();
     },
   };
 })(ItemCtrl, UICtrl);
 
+// Initialize App
 App.init();
