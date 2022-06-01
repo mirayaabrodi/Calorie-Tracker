@@ -59,12 +59,14 @@ const UICtrl = (function () {
       let html = "";
       items.forEach(function (item) {
         html += `<li class="collection-item" id="${item.id}">
-        <strong>¼item.name}</strong> <em>${item.calories}</em>
+        <strong>${item.name}</strong> <em>${item.calories}</em>
         <a href="#" class="setting">
             <i class="edit-item fa-solid fa-gear"></i>
         </a>
     </li>`;
       });
+      // Insert list items
+      document.querySelector(".item-list").innerHTML = html;
     },
   };
 })();
