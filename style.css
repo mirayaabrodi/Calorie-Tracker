@@ -128,5 +128,24 @@ ul {
   border-image-source: var(--gardient);
 }
 
-/* Add MeaL Button */
+/* Add Meal Button */
 
+.card-button {
+  display: none;
+  text-align: center;
+}
+.card-button button {
+  border: none;
+  width: 100px;
+  padding: 5px;
+  margin: 20px 0 10px 0;
+  cursor: pointer;
+  border-radius: 30px;
+  background: var(--gardient);
+  font-size: calc(20 / 16 * 1rem);
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
+}
+
+.card-button button i {
+  color: var(--white);
+}
