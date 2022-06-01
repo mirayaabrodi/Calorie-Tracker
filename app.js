@@ -1,5 +1,59 @@
-// Selectors
-const totalCalories = document.querySelector(".calories-result");
-const calorieInput = document.querySelector("#calorie-input");
-const mealInput = document.querySelector("#meal-input");
-const addMealButton = document.querySelector(".add-meal-btn");
+// Storage Controller
+
+// Item Controller
+const ItemCtrl = (function () {
+  // Item Constructor
+  const Item = function (id, name, caloies) {
+    this.id = id;
+    this.name = name;
+    this, (caloies = caloies);
+  };
+
+  // Data structor
+  const data = {
+    items: [
+      {
+        id: 0,
+        name: "Steak Dinner",
+        calories: 1200,
+      },
+      {
+        id: 1,
+        name: "Cookie",
+        calories: 400,
+      },
+      {
+        id: 2,
+        name: "Eggs",
+        calories: 200,
+      },
+    ],
+    currentItem: null, // if we click on settings (on a item), we want that paticular item to be the current item
+    totalCalories: 0,
+  };
+
+  // Access data in console
+  return {
+    logData: function () {
+      return data;
+    },
+  };
+})();
+
+// UI Controller
+const UICtrl = (function () {
+  // Public Mehods
+  return {};
+})();
+
+// App Controller
+const AppCtrl = (function (itemCtrl, UICtrl) {
+  // Public Mehtods
+  return {
+    init: function () {
+      console.log("hellog");
+    },
+  };
+})(ItemCtrl, UICtrl);
+
+AppCtrl.init();
