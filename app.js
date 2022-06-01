@@ -1,5 +1,7 @@
 // Storage Controller
 
+// --------------------------------------------------------------------------------------------------
+
 // Item Controller
 const ItemCtrl = (function () {
   // Item Constructor
@@ -9,8 +11,7 @@ const ItemCtrl = (function () {
     this, (caloies = caloies);
   };
 
-
-
+  // --------------------------------------------------------------------------------------------------
 
   // Data structor
   const data = {
@@ -46,24 +47,40 @@ const ItemCtrl = (function () {
   };
 })();
 
-
-
+// --------------------------------------------------------------------------------------------------
 
 // UI Controller
 const UICtrl = (function () {
   // Public Mehods
-  return {};
+  return {
+    populateItemList: function (items) {
+      // loop thru items, make each one to a list item, then insert it to ul (item-list)
+
+      let html = "";
+      items.forEach(function (item) {
+        html += `<li class="collection-item" id="${item.id}">
+        <strong>¼item.name}</strong> <em>${item.calories}</em>
+        <a href="#" class="setting">
+            <i class="edit-item fa-solid fa-gear"></i>
+        </a>
+    </li>`;
+      });
+    },
+  };
 })();
+
+// --------------------------------------------------------------------------------------------------
 
 // App Controller
 const AppCtrl = (function (itemCtrl, UICtrl) {
   // Public Mehtods
   return {
     init: function () {
-      console.log("Initializing App...");
+      // Fetch item from data structure
       const item = itemCtrl.getItems();
 
-      console.log(item)
+      // Populate list with items
+      UICtrl.populateItemList(item);
     },
   };
 })(ItemCtrl, UICtrl);
