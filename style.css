@@ -89,13 +89,13 @@ ul {
   font-weight: 500;
   color: var(--pink);
   padding-bottom: 30px;
-  font-size: calc(25 / 16 * 1rem);
+  font-size: calc(22 / 16 * 1rem);
 }
 
 .calories span {
   font-weight: 500;
   color: var(--pink);
-  font-size: calc(25 / 16 * 1rem);
+  font-size: calc(22 / 16 * 1rem);
 }
 /* Card Input */
 
@@ -125,5 +125,8 @@ ul {
   border-image-slice: 1;
   transition: all 0.3s ease;
   border-bottom: 2px solid;
-  border-image-source: linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+  border-image-source: var(--gardient);
 }
+
+/* Add MeaL Button */
+
