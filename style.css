@@ -1,6 +1,6 @@
 :root {
   --white: #fff;
-  --grey: #dbdee1;
+  --grey: #eeeeee;
   --black: #1d1d1f;
   --pink: #fe3f5a;
   --orange: #fe8356;
@@ -27,4 +27,19 @@ a {
 
 ul {
   list-style: none;
+}
+
+/* Wrapper */
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  max-width: 600px;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+  transform: translateY(50%);
 }
