@@ -131,16 +131,16 @@ ul {
 /* Add Meal Button */
 
 .card-button {
-  display: none;
   text-align: center;
 }
 .card-button button {
   border: none;
   width: 100px;
   padding: 5px;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 30px 0;
   cursor: pointer;
   border-radius: 30px;
+  transition: all 0.3s ease;
   background: var(--gardient);
   font-size: calc(20 / 16 * 1rem);
   box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
@@ -151,8 +151,9 @@ ul {
 }
 
 /* Setting Buttons */
+
 .setting-button {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -167,6 +168,7 @@ ul {
   border-radius: 30px;
   transition: all 0.3s ease;
   margin: 20px 20px 30px 20px;
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
 }
 
 .setting-button .edit-btn,
@@ -184,6 +186,7 @@ ul {
 
 .setting-button .edit-btn:hover,
 .setting-button .delete-btn:hover,
-.setting-button .back-btn:hover {
+.setting-button .back-btn:hover,
+.add-meal-btn:hover {
   transform: scale(0.98);
 }
