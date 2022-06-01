@@ -1,7 +1,7 @@
 :root {
   --white: #fff;
   --light-grey: #eeeeee;
-  --medium-grey: #c9c9c9;
+  --medium-grey: #d1d1d1;
   --black: #252525;
   --pink: #fe3f5a;
   --orange: #fe8356;
@@ -36,6 +36,9 @@ ul {
   height: 1px;
 }
 
+::placeholder {
+  color: var(--medium-grey);
+}
 /* Wrapper */
 
 .wrapper {
@@ -90,30 +93,24 @@ ul {
   text-align: center;
   position: relative;
 }
-.item-name,
-.item-calorie {
-  position: relative;
-}
 
-.item-name input,
-.item-calorie input {
+.card-input input {
   width: 100%;
   border: none;
   outline: none;
-  max-width: 75%;
-  margin: 0 10px;
+  margin: 0 20px;
+  max-width: 230px;
+  position: relative;
+  transition: all 0.3s ease;
   color: var(--black);
   font-size: calc(18 / 16 * 1rem);
-  border-bottom: 1px solid;
-  color: var(--black);
+  border-bottom: 2px solid var(--medium-grey);
 }
 
-.item-name p,
-.item-calorie p {
-  color: var(--black);
-  font-size: calc(18 / 16 * 1rem);
-
-  position: absolute;
-  left: 36px;
-  bottom: 1px;
+.card-input input:focus,
+.card-input input:not(:placeholder-shown) {
+  border-image-slice: 1;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid;
+  border-image-source: linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
 }
