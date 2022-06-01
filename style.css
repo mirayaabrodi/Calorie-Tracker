@@ -1,7 +1,8 @@
 :root {
   --white: #fff;
-  --grey: #eeeeee;
-  --black: #1d1d1f;
+  --light-grey: #eeeeee;
+  --medium-grey: #c9c9c9;
+  --black: #252525;
   --pink: #fe3f5a;
   --orange: #fe8356;
   --background: #fea956;
@@ -29,6 +30,12 @@ ul {
   list-style: none;
 }
 
+.line {
+  background: var(--light-grey);
+  width: 100%;
+  height: 1px;
+}
+
 /* Wrapper */
 
 .wrapper {
@@ -49,9 +56,9 @@ ul {
 /* Logo */
 
 .logo {
-  text-align: center;
   width: 100%;
   max-width: 400px;
+  text-align: center;
 }
 
 .logo h1 {
@@ -61,8 +68,15 @@ ul {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.line {
-  background: var(--grey);
+
+/* Total Calories*/
+
+.calories {
   width: 100%;
-  height: 1px;
+  padding: 15px 0;
+  max-width: 400px;
+  text-align: center;
+}
+.calories h2 {
+  padding-bottom: 15px;
 }
