@@ -61,13 +61,35 @@ ul {
 .logo {
   width: 100%;
   max-width: 500px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   text-align: center;
 }
 
 .logo h1 {
-  padding-bottom: 30px;
   font-size: calc(35 / 16 * 1rem);
+  padding-bottom: 30px;
+  background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+/* Clear Button */
+.clear-all-btn {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: none;
+}
+
+.clear-all-btn i {
+  font-size: calc(30 / 16 * 1rem);
   background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -187,7 +209,7 @@ ul {
 .setting-button .edit-btn:hover,
 .setting-button .delete-btn:hover,
 .setting-button .back-btn:hover,
-.add-meal-btn:hover {
+.clear-all-btn:hover .add-meal-btn:hover {
   transform: scale(0.98);
 }
 

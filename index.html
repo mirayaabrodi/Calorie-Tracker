@@ -40,41 +40,49 @@
         <section class="wrapper">
             <!-- logo  -->
             <div class="logo">
-                <h1>Calorie Tracker</h1>
+                <div class="logo-wrapper">
+                    <h1>Calorie Tracker</h1>
+                    <!-- Clear Button -->
+                    <button class="clear-all-btn"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
                 <div class="line"></div>
             </div>
+
+
             <!-- Total Calories -->
             <div class="calories">
                 <div class="total-calories">
                     <h2>Total Calories: </h2><span class="calories-result">0</span>
+                </div>
+                <div class="line"></div>
+                <!-- clear Button -->
 
+
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Card Input -->
+                        <div class="card-input">
+                            <input type="text" name="Meal" id="meal-input" placeholder="Meal">
+                            <input type="text" name="Calories" id="calorie-input" placeholder="Calories">
+                        </div>
+                        <!-- Add Meal Button -->
+                        <div class="card-button">
+                            <button class="add-meal-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <!-- Settings Button -->
+                        <div class="setting-button">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                            <button class="back-btn">Back</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="line"></div>
-            </div>
-            <!-- Card -->
-            <div class="card">
-                <div class="card-content">
-                    <!-- Card Input -->
-                    <div class="card-input">
-                        <input type="text" name="Meal" id="meal-input" placeholder="Meal">
-                        <input type="text" name="Calories" id="calorie-input" placeholder="Calories">
-                    </div>
-                    <!-- Add Meal Button -->
-                    <div class="card-button">
-                        <button class="add-meal-btn"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                    <!-- Settings Button -->
-                    <div class="setting-button">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                        <button class="back-btn">Back</button>
-                    </div>
-                </div>
-            </div>
-            <!-- List - Meal, calorie -->
-            <ul class="item-list">
-                <div class="line"></div>
-                <!-- <li class="collection-item" id="item-0">
+                <!-- List - Meal, calorie -->
+                <ul class="item-list">
+                    <div class="line"></div>
+                    <!-- <li class="collection-item" id="item-0">
                     <strong>Steak Dinner:</strong> <em>1200 Calories</em>
                     <a href="#" class="setting">
                         <i class="edit-item fa-solid fa-gear"></i>
@@ -92,7 +100,7 @@
                         <i class=" edit-item fa-solid fa-gear"></i>
                     </a>
                 </li> -->
-            </ul>
+                </ul>
         </section>
 
         <!-- Script -->
