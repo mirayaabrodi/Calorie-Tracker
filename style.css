@@ -88,15 +88,32 @@ ul {
   display: flex;
   padding: 30px 0;
   text-align: center;
+  position: relative;
+}
+.item-name,
+.item-calorie {
+  position: relative;
 }
 
-.card-input input {
+.item-name input,
+.item-calorie input {
   width: 100%;
   border: none;
   outline: none;
   max-width: 75%;
   margin: 0 10px;
-  font-size: 1rem;
+  color: var(--black);
+  font-size: calc(18 / 16 * 1rem);
   border-bottom: 1px solid;
-  color: var(--medium-grey);
+  color: var(--black);
+}
+
+.item-name p,
+.item-calorie p {
+  color: var(--black);
+  font-size: calc(18 / 16 * 1rem);
+
+  position: absolute;
+  left: 36px;
+  bottom: 1px;
 }
