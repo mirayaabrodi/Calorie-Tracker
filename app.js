@@ -9,6 +9,9 @@ const ItemCtrl = (function () {
     this, (caloies = caloies);
   };
 
+
+
+
   // Data structor
   const data = {
     items: [
@@ -34,11 +37,17 @@ const ItemCtrl = (function () {
 
   // Access data in console
   return {
+    getItems: function () {
+      return data.items;
+    },
     logData: function () {
       return data;
     },
   };
 })();
+
+
+
 
 // UI Controller
 const UICtrl = (function () {
@@ -51,7 +60,10 @@ const AppCtrl = (function (itemCtrl, UICtrl) {
   // Public Mehtods
   return {
     init: function () {
-      console.log("hellog");
+      console.log("Initializing App...");
+      const item = itemCtrl.getItems();
+
+      console.log(item)
     },
   };
 })(ItemCtrl, UICtrl);
