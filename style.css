@@ -173,7 +173,7 @@ ul {
 /* Setting Buttons */
 
 .setting-button {
-  display: none;
+  display: flex;
   justify-content: center;
 }
 
