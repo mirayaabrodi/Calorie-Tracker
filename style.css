@@ -20,8 +20,7 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
   background: #f1f1f1;
 }
 
@@ -55,7 +54,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   background: var(--white);
-  transform: translatey(100px);
+  transform: translatey(50px);
   box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
 }
 
@@ -265,4 +264,224 @@ ul {
 
 .collection-item i:hover {
   transform: rotate(45deg);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 620px) {
+  /* Wrapper */
+
+  .wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 30px;
+    transform: translatey(50px);
+  }
+
+  /* Logo */
+
+  .logo {
+    max-width: 450px;
+  }
+
+  .logo h1 {
+    font-size: calc(30 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+
+  /* Total Calories*/
+
+  .calories {
+    max-width: 450px;
+  }
+  .calories h2 {
+    font-size: calc(20 / 16 * 1rem);
+  }
+
+  .calories span {
+    font-size: calc(20 / 16 * 1rem);
+  }
+  /* Card Input */
+
+  .card-input input {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  #meal-input {
+    margin-right: 20px;
+  }
+
+  #calorie-input {
+    margin-left: 20px;
+  }
+
+  /* Add Meal Button */
+
+  .card-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 0 35px 0;
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .setting-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 10px 35px 10px;
+    font-size: 1rem;
+  }
+
+  /* Item List (ul) */
+  .item-list::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .item-list .line {
+    margin-bottom: 40px;
+  }
+
+  .collection-item {
+    text-align: left;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+
+  .collection-item a {
+    left: 90%;
+    position: absolute;
+  }
+
+  .collection-item a i {
+    font-size: calc(18 / 16 * 1rem);
+  }
+}
+
+@media (max-width: 460px) {
+  /* Wrapper */
+  .wrapper {
+    max-width: 400px;
+  }
+
+  /* Logo */
+
+  .logo h1 {
+    font-size: calc(28 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  /* Wrapper */
+
+  .wrapper {
+    padding: 25px;
+    max-width: 360px;
+  }
+
+  /* Logo */
+
+  .logo h1 {
+    font-size: calc(22 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+
+  /* Total Calories*/
+
+  .calories h2 {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .calories span {
+    font-size: calc(18 / 16 * 1rem);
+  }
+  /* Card Input */
+
+  .card-input input {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  #meal-input {
+    margin-right: 10px;
+  }
+
+  #calorie-input {
+    margin-left: 10px;
+  }
+
+  /* Add Meal Button */
+
+  .card-button button {
+    width: 80px;
+    padding: 5px;
+    margin: 0 0 30px 0;
+    font-size: calc(14 / 16 * 1rem);
+  }
+
+  .setting-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 10px 30px 10px;
+    font-size: calc(13 / 16 * 1rem);
+  }
+}
+
+@media (max-width: 380px) {
+  /* Wrapper */
+
+  .wrapper {
+    padding: 25px;
+    max-width: 345px;
+  }
+
+  /* Logo */
+
+  .logo h1 {
+    font-size: calc(22 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+
+  /* Total Calories*/
+
+  .calories h2 {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .calories span {
+    font-size: calc(18 / 16 * 1rem);
+  }
+  /* Card Input */
+
+  .card-input input {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  #meal-input {
+    margin-right: 10px;
+  }
+
+  #calorie-input {
+    margin-left: 10px;
+  }
+
+  /* Add Meal Button */
+
+  .card-button button {
+    width: 80px;
+    padding: 5px;
+    margin: 0 0 30px 0;
+    font-size: calc(14 / 16 * 1rem);
+  }
+
+  .setting-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 10px 30px 10px;
+    font-size: calc(13 / 16 * 1rem);
+  }
 }
