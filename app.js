@@ -183,10 +183,10 @@ const App = (function (ItemCtrl, UICtrl) {
       .querySelector(UISelectors.addBtn)
       .addEventListener("click", itemAddSubmit);
 
-    // Edit Icon click
+    // Edit Icon click event
     document
       .querySelector(UISelectors.itemList)
-      .addEventListener("click", itemUpdateSubmit);
+      .addEventListener("click", itemEditClick);
   };
 
   // Add item submit
@@ -214,8 +214,8 @@ const App = (function (ItemCtrl, UICtrl) {
     e.preventDefault();
   };
 
-  // Update item submit
-  const itemUpdateSubmit = function (e) {
+  // Click on edit item (gear symbol)
+  const itemEditClick = function (e) {
     if (e.target.classList.contains("fa-gear")) {
       // Get list item id (item-0, item-1,...)
       const listId = e.target.parentNode.parentNode.id;
