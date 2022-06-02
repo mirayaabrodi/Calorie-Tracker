@@ -80,16 +80,14 @@ ul {
 
 /* Clear Button */
 .clear-all-btn {
+  font-weight: 500;
   border: none;
   padding: 5px;
   cursor: pointer;
   border-radius: 30px;
   transition: all 0.3s ease;
   background: none;
-}
-
-.clear-all-btn i {
-  font-size: calc(30 / 16 * 1rem);
+  font-size: 1rem;
   background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
