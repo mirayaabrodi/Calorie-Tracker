@@ -19,6 +19,9 @@
 }
 
 body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   background: #f1f1f1;
 }
 
@@ -52,7 +55,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   background: var(--white);
-  transform: translateY(50%);
+  transform: translatey(100px);
   box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
 }
 
@@ -215,15 +218,30 @@ ul {
 
 .item-list {
   width: 100%;
+  padding-top: 40px;
   max-width: 500px;
   text-align: center;
   position: relative;
+  overflow-y: auto;
+  max-height: 300px;
 }
 
 .item-list .line {
   margin-bottom: 40px;
 }
 
+.item-list::-webkit-scrollbar {
+  width: 5px;
+}
+.item-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.item-list::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+  border-radius: 25px;
+}
 .collection-item {
   text-align: left;
   position: relative;
@@ -232,7 +250,7 @@ ul {
 }
 
 .collection-item a {
-  left: 100%;
+  left: 90%;
   position: absolute;
 }
 
