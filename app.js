@@ -161,7 +161,7 @@ const UICtrl = (function () {
       // Add HTML
       li.innerHTML = `<strong>${item.name}: </strong> <em>${item.calories} Calories</em>
       <a href="#" class="secondary-content">
-        <i class="edit-item fa fa-pencil"></i>
+        <i class="edit-item fa-solid fa-gear"></i>
       </a>`;
       // Insert item
       document
@@ -182,7 +182,7 @@ const UICtrl = (function () {
             `#${itemID}`
           ).innerHTML = `<strong>${item.name}: </strong> <em>${item.calories} Calories</em>
           <a href="#" class="secondary-content">
-            <i class="edit-item fa fa-pencil"></i>
+            <i class="edit-item fa-solid fa-gear"></i>
           </a>`;
         }
       });

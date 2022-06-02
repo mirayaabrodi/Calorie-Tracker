@@ -210,7 +210,8 @@ ul {
 .setting-button .edit-btn:hover,
 .setting-button .delete-btn:hover,
 .setting-button .back-btn:hover,
-.clear-all-btn:hover .add-meal-btn:hover {
+.clear-all-btn:hover .add-meal-btn:hover,
+.add-meal-btn:hover {
   transform: scale(0.98);
 }
 
@@ -245,7 +246,7 @@ ul {
 .collection-item {
   text-align: left;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: calc(18 / 16 * 1rem);
 }
 
@@ -259,4 +260,9 @@ ul {
   background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.collection-item i:hover {
+  transform: rotate(45deg);
 }
